@@ -34,7 +34,7 @@
     "lint:fix": "pnpm lint -- --fix",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
-    "build": "NODE_ENV=production tsup",
+    "build": "cross-env NODE_ENV=production tsup",
     "build:watch": "tsup --watch",
     "postbuild": "pnpm run check:exports && pnpm check:circulars",
     "check:exports": "attw --pack .",
